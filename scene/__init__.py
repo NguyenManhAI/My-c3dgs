@@ -60,6 +60,13 @@ class Scene:
             scene_info = sceneLoadTypeCallbacks["Blender"](
                 args.source_path, args.white_background, args.eval
             )
+
+        elif os.path.exists(os.path.join(args.source_path, "transforms.json")):
+            print("Found transforms.json file, assuming Splatfacto model!")
+            scene_info = sceneLoadTypeCallbacks["Splatfacto"](
+                args.source_path, args.eval
+            )
+
         else:
             assert False, "Could not recognize scene type!"
 
