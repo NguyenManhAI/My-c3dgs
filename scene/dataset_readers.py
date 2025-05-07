@@ -305,7 +305,7 @@ def readCamerasFromSplatfacto(path, transformsfile, extension=".jpg"):
     
     return cam_infos
 
-def readSplatfactoInfo(path, eval=False, llffhold=8):
+def readSplatfactoInfo(path, eval=False, llffhold=10):
     print("Reading Splatfacto Transforms")
     all_cam_infos = readCamerasFromSplatfacto(path, "transforms.json")
     
